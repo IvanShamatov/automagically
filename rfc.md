@@ -1,6 +1,4 @@
-# Alpha RFC for gem
-
-# AUTOMAGICALLY 
+# Alpha RFC for gem automagically
 
 Micro-framework to build API for your frontend app and simple admin to be able to store some content.
 ---
