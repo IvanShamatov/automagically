@@ -1,8 +1,7 @@
-# Automagically
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/automagically`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# Automagically 
+Micro-framework to build API for your frontend app and simple admin to be able to store some content.
+UNDER CONSTRUCTION.
+---
 
 ## Installation
 
@@ -22,17 +21,57 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Inpired by:
+* sinatra + padrino
+* grape
+* goliath
+* active_model_serializer
+* active_admin + rails_admin
+* and rails of couse
 
-## Development
+## Quick start
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+    require 'automagically'
+    get :reports do
+      title :string, public: true
+      file :string
+      author :string , public: true
+    end
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+It means that you can make a `GET /reports` request and it will respond you with a collection of reports like: 
 
-## Contributing
+```json
+{
+    "reports": [
+        {
+            "title": "First one",
+            "author": "Kent Willson"
+        },
+        {
+            "title": "Report last",
+            "author": "Maria Brown"
+        }
+    ]
+}
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/automagically.
+More than that, it will give you access to CRUD your model via admin panel.
+`/admin/reports` is really heavy because it's gonna be frontend app, which will use api to create/edit and store data.
+
+
+## Configuring database
+
+Yes, it should work automagically, so it is mostly about Convention over Configuration. That means that by default `automagically` will use `autoconfig.yml` file where it believes to find database configuration same format as Rails gives you.
+
+
+## Restrictions
+
+Yep, first of all there should be a bunch of restrictions, so then you have to use other instuments and don't use `automagically` when it is not appropriate. For example
+Don't use `automagically`:
+* when you need complex data processing on backend. It is not for processing, but just giveback some JSON.
+* ...
 
 
 ## License
