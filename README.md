@@ -2,7 +2,7 @@
 Micro-framework to build API for your frontend app and simple admin to be able to store some content. Works automagically.
 UNDER CONSTRUCTION.
 ---
-## Why do I need this? 
+## Why do you need this? 
 Inpired by:
 * sinatra + padrino
 * grape
@@ -11,7 +11,7 @@ Inpired by:
 * active_admin + rails_admin
 * and rails of couse
 
-Yep, there are bunch of solutions how to create backend for SPA, or simple website, in most cases you just use Sinatra if you need simple backend processing, or Grape if you need API. You can even use Padrino to have backend with generators and create some code and get Admin panel. Finally you can create `rails --api` now to create really simple api+DB using active_model_serializer and one of gems to generate admin panel. 
+Yep, there are bunch of solutions how to create backend for SPA or simple website. In most cases you just use Sinatra if you need simple backend processing, or Grape if you need API. You can even use Padrino to have backend with generators and create some code and get Admin panel. Finally you can create `rails --api` now to create really simple api+DB using active_model_serializer and one of gems to generate admin panel. 
 
 But what if you want:
 * simplicity of sinatra (like routes driven framework)
