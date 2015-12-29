@@ -1,6 +1,6 @@
 # Automagically 
 Micro-framework to build API for your frontend app and simple admin to be able to store some content. Works automagically.
-UNDER CONSTRUCTION.
+UNDER CONSTRUCTION. Read the story in progress `https://medium.com/@wi11son` 
 ---
 ## Why do you need this? 
 Inpired by:
@@ -43,12 +43,8 @@ Or install it yourself as:
 ## Quick start
 
 ```ruby
-    require 'automagically'
-    get :reports do
-      title :string, public: true
-      file :string
-      author :string , public: true
-    end
+require 'automagically'
+route :reports, Report.all
 ```
 
 It means that you can make a `GET /reports` request and it will respond you with a collection of reports like: 
@@ -70,12 +66,6 @@ It means that you can make a `GET /reports` request and it will respond you with
 
 More than that, it will give you access to CRUD your model via admin panel.
 `/admin/reports` is really heavy because it's gonna be frontend app, which will use api to create/edit and store data.
-
-
-## Configuring database
-
-Yes, it should work automagically, so it is mostly about Convention over Configuration. That means that by default `automagically` will use `autoconfig.yml` file where it believes to find database configuration same format as Rails gives you.
-
 
 ## Restrictions
 
